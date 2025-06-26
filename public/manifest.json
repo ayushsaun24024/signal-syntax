@@ -1,0 +1,22 @@
+
+{
+  "name": "Signals & Syntax",
+  "short_name": "S&S",
+  "description": "Personal portfolio of Ayush Saun, an Engineer & Applied Researcher.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E6E6FA",
+  "theme_color": "#4B0082",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
