@@ -32,7 +32,7 @@ const AboutSection = () => {
         <div className="col-span-1">
           <div className="relative aspect-square rounded-full overflow-hidden shadow-2xl shadow-primary/20">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/data/profilePic.png"
               alt="Ayush Saun"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"

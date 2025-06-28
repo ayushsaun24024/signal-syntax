@@ -28,6 +28,7 @@ const PUBLIC_KEY  = 'ckXbYFvsg8JC0S4tJ';
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email." }),
+  subject: z.string().min(1, { message: "Subject is required." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -51,7 +52,17 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+        },
+        PUBLIC_KEY
+      );
       toast({
         title: "Message sent successfully!",
         description: "Thanks for reaching out. I'll get back to you soon.",
@@ -116,6 +127,19 @@ const ContactSection = () => {
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input type="email" placeholder="your.email@example.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="subject"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subject</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Subject" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

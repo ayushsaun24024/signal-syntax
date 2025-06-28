@@ -25,7 +25,7 @@ const HeroSection = () => {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <Button size="lg" asChild>
-            <a href="/ayush-saun-cv.pdf" download>
+            <a href="./data/Resume.pdf" download>
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </a>

@@ -64,7 +64,7 @@ const Header = () => {
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2 sm:space-x-4">
           <Button asChild variant="outline" size="sm">
-            <a href="/ayush-saun-cv.pdf" download>
+            <a href="./data/Resume.pdf" download>
               <Download className="mr-0 sm:mr-2 h-4 w-4" />
               <span className="hidden sm:inline">Download CV</span>
             </a>
