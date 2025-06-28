@@ -9,7 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "export": "next export",
+    "deploy": "next build && next export && gh-pages -d out"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
